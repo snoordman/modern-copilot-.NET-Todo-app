@@ -1,0 +1,24 @@
+{
+  "name": "TodoApp",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/dotnet:2": { "version": "8.0" },
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {},
+    "ghcr.io/w3cj/devcontainer-features/firewall:0.0.2": {
+      "verbose": true,
+      "claudeCode": true,
+      "githubDomains": true,
+      "hosts": "api.nuget.org,claude.ai,platform.claude.com,downloads.claude.ai"
+    }
+  },
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=claude-config-${devcontainerId},target=/home/vscode/.claude,type=volume"
+  ],
+  "containerEnv": {
+    "CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
+  },
+  "postCreateCommand": "sudo chown vscode:vscode /home/vscode/.claude",
+  "postStartCommand": "sudo -n rm -f /etc/sudoers.d/vscode 2>/dev/null || true"
+}
