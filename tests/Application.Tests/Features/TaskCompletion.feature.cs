@@ -26,8 +26,8 @@ namespace Application.Tests.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Task Completion", "  As a user of the Todo application\r\n  I want to mark tasks as complete\r\n  So tha" +
-                "t I can track my progress", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Task Completion", "  As a user of the Todo application\n  I want to mark tasks as complete\n  So that " +
+                "I can track my progress", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         

@@ -26,8 +26,8 @@ namespace Application.Tests.Features
         
         private static string[] featureTags = ((string[])(null));
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Rate Limiting", "  As an API administrator\r\n  I want rate limiting on endpoints\r\n  So that the API" +
-                " is protected from abuse", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Rate Limiting", "  As an API administrator\n  I want rate limiting on endpoints\n  So that the API i" +
+                "s protected from abuse", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags);
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
