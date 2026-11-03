@@ -16,6 +16,7 @@ Fork: `snoordman/modern-copilot-.NET-Todo-app`
 | 2026-11-03 | Created the rough issue from `spec.md`. | [#1 Group tasks into projects](https://github.com/snoordman/modern-copilot-.NET-Todo-app/issues/1) |
 | 2026-11-03 | Checked prerequisites: no devcontainer firewall allowlist exists, and `api.githubcopilot.com/mcp/` is reachable (401 without token). | – |
 | 2026-11-03 | Wrote this plan. | `docs/lab-04-plan.md` |
+| 2026-11-03 | Step 0: parked the old Projects WIP (3 modified + 9 untracked files) on local branch `wip-old-projects`. Main now only has untracked `customDocs/` and `.claude/worktrees/` (agent worktrees). | commit `22c2278` on `wip-old-projects` (not pushed) |
 
 ## The agents
 
@@ -30,7 +31,7 @@ Fork: `snoordman/modern-copilot-.NET-Todo-app`
 
 | # | Step | Who | Output / gate | Status |
 |---|------|-----|---------------|--------|
-| 0 | Park the old uncommitted Projects work on `main` (`Application/PRJ004Projects/`, `Project.cs`, Project events, `ProjectEventHandler.cs`, edits to `TaskItem.cs`/`AppDbContext.cs`/`CacheKeys.cs`) on a separate branch so `lab-04` starts clean. | Claude, after OK | `git status` on main shows only `customDocs/` | waiting for OK |
+| 0 | Park the old uncommitted Projects work on `main` (`Application/PRJ004Projects/`, `Project.cs`, Project events, `ProjectEventHandler.cs`, edits to `TaskItem.cs`/`AppDbContext.cs`/`CacheKeys.cs`) on a separate branch so `lab-04` starts clean. | Claude, after OK | `git status` on main shows only `customDocs/` (+ `.claude/worktrees/`) | done |
 | 1 | Agents on main. | Claude | commit `c312e2d` | done |
 | 2 | Enable Issues, create rough issue. | Claude | issue #1 | done |
 | 3 | GitHub MCP: fine-grained PAT (only this fork; Issues read/write, Contents read), then `claude mcp add --transport http github https://api.githubcopilot.com/mcp/ --header "Authorization: Bearer <PAT>"` in **local** scope (never `--scope project`: that writes the PAT into `.mcp.json`). Restart, check `/mcp`. | You | `/mcp` shows github ✓ | todo |
